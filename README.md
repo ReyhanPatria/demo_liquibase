@@ -88,3 +88,18 @@ Or you could specify the output file right in the command as a parameter `mvn li
 
 ### Other Liquibase Commands
 The standard Liquibase provides many powerful commands that can be used in various ways, I encourage you to explore about it the [documentation](https://docs.liquibase.com/commands/home.html)
+
+
+### History
+To see a history of the executed changelogs you can use the `mvn liquibase:history` command. It'll look something like this.
+```
+Reading from DATABASECHANGELOG
+- Database updated at 1/27/22 2:02 PM. Applied 7 changeSet(s) in 0.0s, DeploymentId: 3266975019
+  src/main/resources/db/changelog/changes/dev0/dev0.0_create_user_table.xml::dev0.0::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.1_add_data_to_user_table.xml::dev0.0::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.2_create_product_table.xml::dev0.0::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.3_insert_product_data.sql::dev0.3::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.4_create_transaction_table.sql::dev0.4::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.5_insert_transaction_data.sql::dev0.5::Reyhan Patria
+  src/main/resources/db/changelog/changes/dev0/dev0.6_insert_transaction_details_data.xml::dev0.0::Reyhan Patria  
+```
