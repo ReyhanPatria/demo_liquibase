@@ -1,0 +1,16 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.0_create_user_table.xml" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.1_add_data_to_user_table.xml" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.2_create_product_table.xml" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.3_insert_product_data.sql" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.4_create_transaction_table.sql" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.5_insert_transaction_data.sql" />
+    <include file="src/main/resources/db/changelog/changes/dev0/dev0.6_insert_transaction_details_data.xml" />
+
+</databaseChangeLog>

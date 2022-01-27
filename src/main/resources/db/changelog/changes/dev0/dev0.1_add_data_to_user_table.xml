@@ -1,0 +1,23 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   
+    <changeSet id="dev0.0" author="Reyhan Patria">
+        <preConditions onError="MARK_RAN">
+            <tableExists tableName="user" />
+        </preConditions>
+
+        <loadData 
+                file="src/main/resources/db/changelog/changes/dev0/data/user.csv"
+                separator=","
+                tableName="user">
+            <column header="email" name="email" type="STRING"/>
+            <column header="password" name="password" type="STRING"/>
+            <column header="name" name="name" type="STRING"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

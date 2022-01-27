@@ -1,0 +1,23 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+   
+    <changeSet id="dev0.0" author="Reyhan Patria">
+        <preConditions onError="MARK_RAN">
+            <tableExists tableName="transaction_details" />
+        </preConditions>
+
+        <loadData 
+                file="src/main/resources/db/changelog/changes/dev0/data/transaction_details.csv"
+                separator=","
+                tableName="transaction_details">
+            <column header="transactionId" name="transactionId" type="NUMERIC"/>
+            <column header="productId" name="productId" type="NUMERIC"/>
+            <column header="quantity" name="quantity" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

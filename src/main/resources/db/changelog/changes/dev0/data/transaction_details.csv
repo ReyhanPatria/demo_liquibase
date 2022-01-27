@@ -1,0 +1,5 @@
+transactionId,productId,quantity
+1,2,123
+1,1,54
+2,1,2
+2,2,4
