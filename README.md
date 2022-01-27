@@ -86,10 +86,6 @@ outputChangeLogFile=src/main/resources/db/changelog/outputChangeLog.xml
 Or you could specify the output file right in the command as a parameter `mvn liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=dboutput.xml`
 
 
-### Other Liquibase Commands
-The standard Liquibase provides many powerful commands that can be used in various ways, I encourage you to explore about it the [documentation](https://docs.liquibase.com/commands/home.html)
-
-
 ### History
 To see a history of the executed changelogs you can use the `mvn liquibase:history` command. It'll look something like this.
 ```
@@ -103,3 +99,7 @@ Reading from DATABASECHANGELOG
   src/main/resources/db/changelog/changes/dev0/dev0.5_insert_transaction_data.sql::dev0.5::Reyhan Patria
   src/main/resources/db/changelog/changes/dev0/dev0.6_insert_transaction_details_data.xml::dev0.0::Reyhan Patria  
 ```
+
+
+### Other Liquibase Commands
+The standard Liquibase provides many powerful commands that can be used in various ways, I encourage you to explore about it the [documentation](https://docs.liquibase.com/commands/home.html)
